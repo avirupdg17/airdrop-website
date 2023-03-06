@@ -1,0 +1,11 @@
+<form [formGroup]="airdropForm" (ngSubmit)="airdrop()">
+  <p>
+    <label for="address">Address: </label>
+    <input type="text" name="address" id="address" formControlName="address" />
+  </p>
+  <p>
+    <label for="amount">Amount: </label>
+    <input type="number" name="amount" id="amount" formControlName="amount" />
+  </p>
+  <button type="submit" [disabled]="airdropForm.invalid">Submit</button>
+</form>
